@@ -1,0 +1,3 @@
+[submodule "dbmodel"]
+	path = dbmodel
+	url = git@github.com:pile-contributors/dbmodel.git
