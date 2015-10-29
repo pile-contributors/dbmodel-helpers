@@ -1,3 +1,9 @@
 [submodule "dbmodel"]
 	path = dbmodel
 	url = git@github.com:pile-contributors/dbmodel.git
+[submodule "dbdelegate"]
+	path = dbdelegate
+	url = git@github.com:pile-contributors/dbdelegate.git
+[submodule "dbstruct"]
+	path = dbstruct
+	url = git@github.com:pile-contributors/dbstruct.git
