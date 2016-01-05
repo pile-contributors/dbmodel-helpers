@@ -2,14 +2,14 @@
 #
 # Introduction
 # ------------
-# 
-# This file is the main file for the dbmodel-helpers. The project follows 
+#
+# This file is the main file for the dbmodel-helpers. The project follows
 # the pattern laid out at http://pile-contributors.github.io/
 # for a `pile-helpers` repository.
 #
 # Usage
 # -----
-# 
+#
 # You can use the resources in this project to understand this pile,
 # to use it as a model for your own piles or to improve and test this pile.
 #
@@ -19,6 +19,11 @@
 # ============================================================================
 
 set (PROJECT_NAME "dbmodel-helpers")
+
+list (APPEND CMAKE_MODULE_PATH "$ENV{CMAKE_MODULE_PATH}")
+IF(WIN32)
+    string(REPLACE "\\" "/" CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}")
+ENDIF()
 
 project(${PROJECT_NAME})
 cmake_minimum_required(VERSION 2.8.11)
@@ -45,6 +50,7 @@ find_package(Qt5 COMPONENTS Core)
 if(Qt5Core_FOUND)
     include_directories(
          ${Qt5Core_INCLUDE_DIRS})
+    set(CMAKE_AUTOMOC ON)
 endif()
 
 if(INCLUDE_PILE_SOURCES_DIRECTLY)

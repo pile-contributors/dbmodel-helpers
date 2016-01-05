@@ -20,5 +20,10 @@ public:
 
 TEST_F(TestUsage, initial_state) {
 
+    DbStruct * db = new DbStruct();
+    DbTaew * meta = new DbTaew();
+    DbModel model (db, meta);
+
+
 }
 
